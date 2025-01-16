@@ -4,16 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siemens Xcelerator Chatbot</title>
+    <style>
+        /* Basic Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #005daa;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        /* Description Text */
+        p {
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        /* Chatbot Container */
+        .chatbot-container {
+            width: 100%;
+            height: calc(100vh - 140px); /* Full screen minus header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        gradio-app {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Siemens Xcelerator Chatbot</h1>
-    <p>Interact with the chatbot below:</p>
 
-    <script
-        type="module"
-        src="https://gradio.s3-us-west-2.amazonaws.com/5.0.1/gradio.js"
-    ></script>
+    <header>
+        Siemens Xcelerator Chatbot
+    </header>
 
-    <gradio-app src="https://khelverskovp-xcelerator-chatbot.hf.space"></gradio-app>
+    <p>Interact with the chatbot below to learn more about Siemens Xcelerator services.</p>
+
+    <div class="chatbot-container">
+        <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.0.1/gradio.js"></script>
+        <gradio-app src="https://khelverskovp-xcelerator-chatbot.hf.space"></gradio-app>
+    </div>
+
 </body>
 </html>
